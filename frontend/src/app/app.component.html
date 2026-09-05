@@ -1,0 +1,22 @@
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark">MX</span><span>MoveIQ</span></div>
+    <div class="eyebrow">Transport Operations</div>
+    <nav>
+      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      <a routerLink="/alerts" routerLinkActive="active">Alerts</a>
+      <a routerLink="/reports" routerLinkActive="active">Reports</a>
+      <a routerLink="/cases" routerLinkActive="active">Cases</a>
+      <a routerLink="/vendors" routerLinkActive="active">Vendors</a>
+      <a routerLink="/employees" routerLinkActive="active">Employees</a>
+    </nav>
+    <div class="sidebar-foot">Autonomous SLA Enforcer<br><span>Live data pipeline</span></div>
+  </aside>
+  <section class="workspace">
+    <header class="topbar">
+      <div><div class="eyebrow">Operational command center</div><h1>Compliance intelligence</h1></div>
+      <div class="toolbar-actions"><span>Simulated date: {{ currentDate || 'loading...' }}</span><button (click)="advanceDay()">Advance operational day</button></div>
+    </header>
+    <main><router-outlet></router-outlet></main>
+  </section>
+</div>
